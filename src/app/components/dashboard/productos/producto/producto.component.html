@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row" style="width: 100%;">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card text-center shadow" style="padding: 20px;">
+                <div class="header">
+                    <div class="volver">
+                        <i class="fas fa-arrow-left back" routerLink="/dashboard"></i>
+                    </div>
+                    <h3 class="titulo">Modificar Sucursal</h3>
+                </div>
+            <app-loading *ngIf="loading"></app-loading>
+                <div class="form-row">
+                    <div class="form-group col-md-6" style="text-align: start;">
+                        <label>Codigo:</label>
+                        <input type="number" class="form-control" placeholder="Ingrese codigo de la sucursal"
+                        [(ngModel)]="sucursal.codigo" readonly>
+                    </div>
+                    <div class="form-group col-md-6" style="text-align: start;">
+                        <label>Descripcion:</label>
+                        <input type="text" class="form-control" placeholder="Ingrese descripcion de la sucursal"
+                        [(ngModel)]="sucursal.descripcion">
+                    </div>
+                </div>
+                <div class="form-row">
+                   
+                    <div class="form-group col-md-6" style="text-align: start;">
+                        <label>Direccion:</label>
+                        <input type="text" class="form-control" placeholder="Ingrese direccion de la sucursal"
+                        [(ngModel)]="sucursal.direccion">
+                    </div>
+
+                    <div class="form-group col-md-6" style="text-align: start;">
+                        <label>Identificacion</label>
+                        <input type="text" class="form-control" placeholder="Ingrese identificacion de la sucursal"
+                        [(ngModel)]="sucursal.identificacion">
+                    </div>
+
+                   
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6" style="text-align: start;">
+                        <label>Moneda</label>
+                        <input type="text" class="form-control" placeholder="Moneda"
+                        [(ngModel)]="sucursal.moneda.codigoMoneda" readonly>
+                      </div>
+                      
+                      <div class="form-group col-md-6" style="text-align: start;">
+                        <label>Fecha Creación</label>
+                        <input type="text" class="form-control" placeholder="Fecha vencimiento (dd/mm/aaaa)"
+                        [(ngModel)]="sucursal.fechaCreacion" readonly>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-primary btn-reg" (click)="update()">Confirmar</button>
+                </div>
+        </div>
+    </div>
+</div>

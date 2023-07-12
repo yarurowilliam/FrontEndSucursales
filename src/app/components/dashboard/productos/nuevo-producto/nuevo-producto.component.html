@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="row" style="width: 100%;">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card text-center shadow" style="padding: 20px;">
+                <div class="header">
+                    <div class="volver">
+                        <i class="fas fa-arrow-left back" routerLink="/dashboard"></i>
+                    </div>
+                    <h3 class="titulo">Crear Sucursal</h3>
+                </div>
+            <app-loading *ngIf="loading"></app-loading>
+            <form [formGroup]="datosSucursal" (ngSubmit)=registrarSucursal() style="padding-top: 10px;">
+                <div class="form-row">
+                    <div class="form-group col-md-6" style="text-align: start;">
+                        <input type="number" class="form-control" placeholder="Ingrese codigo de Sucursal"
+                            formControlName="codigo">
+                        <span class="text-danger ml-1"
+                            *ngIf="datosSucursal.get('codigo').hasError('required') && datosSucursal.get('codigo').touched">
+                            El codigo <strong>es requerido</strong>
+                        </span>
+                    </div>
+                    <div class="form-group col-md-6" style="text-align: start;">
+                        <input type="text" class="form-control" placeholder="Ingrese la descripcion de la Sucursal"
+                            formControlName="descripcion">
+                        <span class="text-danger ml-1"
+                            *ngIf="datosSucursal.get('descripcion').hasError('required') && datosSucursal.get('descripcion').touched">
+                            La descripcion <strong>es requerida</strong>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6" style="text-align: start;">
+                        <input type="text" class="form-control" placeholder="Ingrese direccion de Sucursal"
+                            formControlName="direccion">
+                        <span class="text-danger ml-1"
+                            *ngIf="datosSucursal.get('direccion').hasError('required') && datosSucursal.get('direccion').touched">
+                            La direccion <strong>es requerida</strong>
+                        </span>
+                    </div>
+                    <div class="form-group col-md-6" style="text-align: start;">
+                        <input type="text" class="form-control" placeholder="Ingrese la identificacion de la Sucursal"
+                            formControlName="identificacion">
+                        <span class="text-danger ml-1"
+                            *ngIf="datosSucursal.get('identificacion').hasError('required') && datosSucursal.get('identificacion').touched">
+                            La identificacion <strong>es requerida</strong>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    
+                    <div class="form-group col-md-6" style="text-align: start;">
+                        <select formControlName="moneda" class="form-control">
+                          <option value="">Seleccionar moneda</option>
+                          <option *ngFor="let moneda of listMonedas" [value]="moneda.id">{{ moneda.codigoMoneda }} - {{ moneda.descripcionMoneda}}</option>
+                        </select>
+                      </div>
+
+                    <div class="form-group col-md-6" style="text-align: start;">
+                        <input type="date" class="form-control" placeholder="Fecha de creacion (dd/mm/aaaa)"
+                            formControlName="fechaCreacion">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-primary btn-reg" [disabled]="datosSucursal.invalid" type="submit">Registrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

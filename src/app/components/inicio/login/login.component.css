@@ -1,0 +1,60 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card{
+    border-color: rgb(238, 238, 238);
+}
+
+h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.alert, strong, span{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+.btn-login{
+    background-color: #0066FF;
+    font-weight: 600;
+    border: none;
+    width: 100%;
+    text-align: center;
+}
+
+.form-group{
+    position: relative;
+}
+
+i{
+    position: absolute;
+	left: 13px;
+	top: 13px;
+	font-size: 14px;
+}
+
+.form-control {
+	padding-left: 40px;
+    min-height: 40px;
+    border-radius: 3px; 
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 14px;
+}
+
+.form-control:focus {
+	border-color: #0066FF;
+}
+
+.header .volver .back{
+    color: rgb(104, 104, 104);
+    font-size: 20px;
+    cursor: pointer;
+    padding-left: 8px;
+    padding-top: 14px;
+}

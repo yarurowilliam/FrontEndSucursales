@@ -1,0 +1,31 @@
+.barra{
+    height: 60px;
+}
+
+.label{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: gray;
+}
+
+.label:hover{
+    text-decoration: none;
+}
+
+.btn{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    background-color: #0066FF;
+    height: 40px;
+    border: none;
+    padding-top: 8px;
+}
+
+.btn:hover{
+    background-color: #1d77ff; 
+}
+
+.active-link{
+    color: black;
+    font-weight: 600;
+}

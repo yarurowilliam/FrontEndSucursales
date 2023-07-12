@@ -1,0 +1,64 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.card{
+    border-color: rgb(238, 238, 238);
+}
+
+h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+strong, span{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+.btn-reg{
+    background-color: #0066FF;
+    font-weight: 600;
+    border: none;
+    width: 100%;
+    text-align: center;
+}
+
+.form-group{
+    position: relative;
+}
+
+.label{
+    float: left;
+}
+
+.form-control {
+    min-height: 40px;
+    border-radius: 3px; 
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 14px;
+}
+
+.form-control:focus {
+	border-color: #0066FF;
+}
+
+.header .volver .back{
+    color: rgb(104, 104, 104);
+    font-size: 20px;
+    cursor: pointer;
+    padding-left: 3px;
+    padding-top: 10px;
+    float: left;
+}
+
+label{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: black;
+}

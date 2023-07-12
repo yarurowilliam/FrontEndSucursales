@@ -1,0 +1,37 @@
+.my-float{
+    font-size: 28px;
+    margin-top: 15px;
+    margin-left: 2px;
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	left:40px;
+	background-color: #1b63c2;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.etiqueta{
+	position:fixed;
+    width: 130px;
+	bottom:106px;
+    left: 6px;
+    border-radius: 10px;
+	background-color: #1b63c2;
+	color:#FFF;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    margin: 0;
+}
